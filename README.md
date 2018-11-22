@@ -1,7 +1,5 @@
 # Mobile-and-Web-Development-Project
 
-# test
-
 # 1. Requirements
 
 * [Git](https://git-scm.com/) 
