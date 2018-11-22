@@ -29,8 +29,9 @@ git@github.com:NazeehAlhosary/Mobile-and-Web-Development-Project.git
   Run Git Bash at the directory of ```express-template``` file  
    * Type in ```npm install && npm start``` OR type in ``` npm install``` then type in ``` npm start ```
    * Open your browser and go to the link: ```http://localhost:3000/```
+   ##### Note: There is no authentication between the type of users in this project yet.
 
-# 5. Android's requirement
+# 5. Android's requirements
 
   * [README](https://github.com/NazeehAlhosary/Mobile-and-Web-Development-Project/tree/master/android-template)
   
