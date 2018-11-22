@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Electronic Store</string>
+    <string name="btn_new_activity">New Activity</string>
+    <string name="btn_get_http">Get Categories</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="btnAddCategory">Add Category</string>
+    <string name="modelText">Model</string>
+    <string name="colorText">Color</string>
+    <string name="brandText">Brand</string>
+    <string name="priceText">Price</string>
+    <string name="OSText">OS</string>
+    <string name="CateText">Category Name</string>
+    <string name="addProductText">Please insert the values to add a product!</string>
+    <string name="addCategoryText">Please insert the Category name to be added!</string>
+
+    <string name="addProductButton">Add Product</string>
+</resources>

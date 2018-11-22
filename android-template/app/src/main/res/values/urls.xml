@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="server_url">http://10.0.2.2:3000</string>
+    <string name="server_urlCategory">http://10.0.2.2:3000/api/admin/categories</string>
+    <!-- <string name="server_GETproductsCategory">http://10.0.2.2:3000/api/products</string> -->
+    <string name="server_GETproductsCategory">http://10.0.2.2:3000/api/products?categoryId=undefined</string>
+
+</resources>

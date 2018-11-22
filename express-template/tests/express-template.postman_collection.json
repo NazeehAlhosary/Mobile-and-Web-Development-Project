@@ -1,0 +1,830 @@
+{
+	"info": {
+		"_postman_id": "5d37022f-460b-4aaa-97f4-57a76f07e0ae",
+		"name": "express-template",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/api/products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "64fd5d44-e231-4567-8f50-db3bca4e55c5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonRespStore = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"_id\", jsonRespStore._id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"color\": \"Black\",\r\n\"model\": \"Aspire E12\" ,\r\n    \"brand\": \"Lenovo\" ,\r\n    \"price\": \"4000\",\r\n    \"OS\": \"Windows\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/{{_id}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "87d8b335-7842-455c-b7e2-5df685046b22",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.environment.get(\"_id\");",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"color\": \"Black\",\r\n\"model\": \"Aspire E12\" ,\r\n    \"brand\": \"Lenovo\" ,\r\n    \"price\": \"4000\",\r\n    \"OS\": \"Windows\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/{{_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"{{_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f2146d6-c5f2-4226-81f8-85e1e99621a1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"color\": \"Black\",\r\n\"model\": \"Aspire E12\" ,\r\n    \"brand\": \"Lenovo\" ,\r\n    \"price\": \"4000\",\r\n    \"OS\": \"Windows\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/products",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/{{_id}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ddacfddc-3622-45bb-82a4-ee226e4d3a20",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.get(\"_id\");",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"color\": \"Red\",\r\n\"model\": \"Aspire E12\" ,\r\n    \"brand\": \"Lenovo\" ,\r\n    \"price\": \"3900\",\r\n    \"OS\": \"Windows\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/admin/{{_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"{{_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/{{_id}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1ab3abf3-4053-4ced-a1a6-1c200a635552",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "localhost:3000/api/products/admin/{{_id}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin",
+						"{{_id}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/products/{{_id}}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "localhost:3000/api/products/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"products",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/shoppingcarts",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ad4a46f4-0667-4d09-97f5-d49310d5acb6",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"",
+							"var jrs = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"_sid\", jrs._id);",
+							"",
+							"",
+							"",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \n          \"productList\" : [\n                \"5ba6228f96071d0f9c9679e5\"\n            ]\n            \n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/shoppingcarts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shoppingcarts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/shoppingcarts/{{_sid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "817ff148-3270-4e39-bbef-2efb78a10b96",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.environment.get(\"_sid\");",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \"productList\": [\"5ba6228f96071d0f9c9679e5\", \"5ba64d1344c3062f38e72ca2\",\"5ba64cfa44c3062f38e72ca1\"\r\n            ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/shoppingcarts/{{_sid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shoppingcarts",
+						"{{_sid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/shoppingcarts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Daniel\",\r\n    \"email\": \"danielbergson@gmail.com\",\r\n    \"companyRN\" : \"1\",\r\n    \"phone\": \"0764585202\",\r\n    \"address\": \"Besvärsgatan 11, Göteborg\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/shoppingcarts",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shoppingcarts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/shoppingcarts/{{_sid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "23e1d2ff-09ef-4a4d-8923-84ea29cb3653",
+						"type": "text/javascript",
+						"exec": [
+							"",
+							"pm.environment.get(\"_sid\"); ",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"productList\": [\"5ba6228f96071d0f9c9679e5\" \r\n\t ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/shoppingcarts/{{_sid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"shoppingcarts",
+						"{{_sid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/shoppingcarts/{{_sid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "ed9d4270-cbdc-4494-b5fd-da96dd2491a1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\t\"productList\": [\"5ba6228f96071d0f9c9679e5\" \r\n\t ]\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/shoppingcarts/{{_sid}}\n\npm.environment.set(\"_id\", jsonRespStore._id",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"pm.environment.set(\"_id\", jsonRespStore._id"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "fe69d1a3-230a-4071-98de-05fe4bc83139",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonRespStore = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"_uid\", jsonRespStore._id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"David\",\r\n    \"email\": \"daviddg@gmail.com\",\r\n    \"phone\": \"0764589548\",\r\n    \"address\": \"Parkgatan 18, Göteborg\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/users/{{_uid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "b9126454-2f44-4d6a-a2f1-0191960c0e15",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.get(\"_uid\");",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Anna\",\r\n    \"email\": \"annalindgren@gmail.com\",\r\n    \"phone\": \"0764589548\",\r\n    \"address\": \"Parkgatan 58, Uppsala\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/admin/{{_uid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"admin",
+						"{{_uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/users/{{_uid}}",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"David\",\r\n    \"email\": \"daviddg@gmail.com\",\r\n    \"phone\": \"0764589548\",\r\n    \"address\": \"Parkgatan 18, Göteborg\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/{{_uid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"{{_uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"David\",\r\n    \"email\": \"daviddg@gmail.com\",\r\n    \"phone\": \"0764589548\",\r\n    \"address\": \"Parkgatan 18, Göteborg\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/users/{{_uid}}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"David\",\r\n    \"email\": \"daviddg@gmail.com\",\r\n    \"phone\": \"0764589548\",\r\n    \"address\": \"Parkgatan 18, Göteborg\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/users/admin/{{_uid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"users",
+						"admin",
+						"{{_uid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "2ff25018-e75b-45c5-accc-dc200ca116e5",
+						"type": "text/javascript",
+						"exec": [
+							"var jsonRespStore = JSON.parse(responseBody);",
+							"",
+							"pm.environment.set(\"_cid\", jsonRespStore._id);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"PC\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/categories/admin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/categories",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f2146d6-c5f2-4226-81f8-85e1e99621a1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Gaming laptops\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/categories",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/categories/{{_cid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "32e21fc4-3ca6-4596-b8bf-83cbe372b3b0",
+						"type": "text/javascript",
+						"exec": [
+							"pm.environment.get(\"_cid\");",
+							"",
+							"jsonData = pm.response.json();"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Smartphones\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/categories/{{_cid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"{{_cid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/categories/{{_cid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f2146d6-c5f2-4226-81f8-85e1e99621a1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Gaming laptops\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/categories/admin/{{_cid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"admin",
+						"{{_cid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "localhost:3000/api/categories/{{_cid}}",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0f2146d6-c5f2-4226-81f8-85e1e99621a1",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\": \"Gaming laptops\"\r\n}"
+				},
+				"url": {
+					"raw": "localhost:3000/api/categories/admin/{{_cid}}",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"categories",
+						"admin",
+						"{{_cid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
